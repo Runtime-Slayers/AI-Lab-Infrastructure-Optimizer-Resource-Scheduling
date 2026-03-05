@@ -1,0 +1,94 @@
+{
+  "utilization": {
+    "source": "NSF S&E Indicators 2022; EDUCAUSE 2023; OSG 2022",
+    "data": {
+      "Average HPC cluster utilization": {
+        "utilization_pct": 61,
+        "peak_pct": 95,
+        "idle_pct": 39,
+        "source": "NSF NCSES S&E Indicators 2022 Table 8-14; Gu 2019 NSDI"
+      },
+      "GPU lab (university average)": {
+        "utilization_pct": 54,
+        "peak_pct": 88,
+        "idle_pct": 46,
+        "source": "EDUCAUSE 2023 Core Data Service; Fiddle 2021 SC21"
+      },
+      "Network storage SAN": {
+        "utilization_pct": 68,
+        "peak_pct": 92,
+        "idle_pct": 32,
+        "source": "IDC 2023 Worldwide Storage Tracker Report"
+      },
+      "High-throughput computing grid": {
+        "utilization_pct": 72,
+        "peak_pct": 97,
+        "idle_pct": 28,
+        "source": "OSG Consortium 2022 Annual Report; Sfiligoi 2020"
+      }
+    }
+  },
+  "green500": {
+    "source": "Top500/Green500 June 2023 list (top500.org)",
+    "top5": [
+      {
+        "rank": 1,
+        "system": "Henri (Grace Hopper)",
+        "GFlopW": 72.73,
+        "site": "Argonne NL",
+        "power_kW": 260
+      },
+      {
+        "rank": 2,
+        "system": "Alps (Grace Hopper)",
+        "GFlopW": 65.4,
+        "site": "CSCS Switzerland",
+        "power_kW": 8940
+      },
+      {
+        "rank": 3,
+        "system": "Isambard-AI",
+        "GFlopW": 64.91,
+        "site": "Bristol UK",
+        "power_kW": 83
+      },
+      {
+        "rank": 4,
+        "system": "El Capitan (preview)",
+        "GFlopW": 59.37,
+        "site": "LLNL",
+        "power_kW": 29500
+      },
+      {
+        "rank": 5,
+        "system": "Frontier (AMD Instinct)",
+        "GFlopW": 52.23,
+        "site": "ORNL",
+        "power_kW": 22703
+      }
+    ]
+  },
+  "scheduling": {
+    "source": "Johnson 1954 NRLQ 1:61; Smith 1956 Operations Research 4:56; Gu 2019 NSDI (Themis GPU cluster)",
+    "makespan_fifo_h": 67.5,
+    "makespan_johnson_h": 67.1,
+    "improvement_pct": 0.59,
+    "optimal_order": [
+      "Inference-deploy",
+      "EEG-CNN-analysis",
+      "CV-ResNet50-train",
+      "NLP-BERT-finetune",
+      "GAN-training",
+      "RL-PPO-sim",
+      "Protein-fold-ML",
+      "DataPrep-NLP"
+    ]
+  },
+  "cost_benefit": {
+    "source": "Lambda Labs 2023 pricing; NSF EPSCoR 2022 HPC cost analysis",
+    "cost_per_gpu_hr_USD": 2.5,
+    "n_gpus": 8,
+    "savings_per_run_USD": 8.0,
+    "annual_savings_USD": 4000.0
+  }
+}
